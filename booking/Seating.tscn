@@ -1,0 +1,124 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://misc/Back.tscn" type="PackedScene" id=1]
+[ext_resource path="res://booking/Seating.gd" type="Script" id=2]
+
+[node name="Seating" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Back" parent="." instance=ExtResource( 1 )]
+margin_top = -1.0
+margin_right = 1020.0
+margin_bottom = 599.0
+
+[node name="Rows" type="YSort" parent="."]
+position = Vector2( 102.054, 79.375 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 74.7798
+margin_top = 543.026
+margin_right = 940.78
+margin_bottom = 583.026
+color = Color( 0.52549, 0.203922, 0.670588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 400.0
+margin_top = 12.599
+margin_right = 467.0
+margin_bottom = 26.599
+text = "S C R E E N"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 954.079
+margin_top = 241.56
+margin_right = 1004.08
+margin_bottom = 377.56
+color = Color( 0.156863, 0.286275, 0.415686, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Confirm" type="Button" parent="ColorRect2"]
+margin_right = 51.0
+margin_bottom = 138.0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2"]
+margin_left = 19.1191
+margin_top = 10.0794
+margin_right = 55.1191
+margin_bottom = 126.079
+text = "C
+O
+N
+F
+I
+R
+M"
+
+[node name="Alpha" type="Label" parent="."]
+margin_left = 48.2197
+margin_top = 64.994
+margin_right = 73.2197
+margin_bottom = 486.994
+text = "A
+
+
+B
+
+
+C
+
+
+D
+
+
+E
+
+
+F
+
+
+G
+
+
+H
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Numbers" type="Label" parent="."]
+margin_left = 96.217
+margin_top = 23.1634
+margin_right = 200.217
+margin_bottom = 37.1634
+text = "1           2          3          4          5          6          7          8          10         11         12         13         14         15         16        17        18"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Error" type="Label" parent="."]
+visible = false
+margin_left = 948.428
+margin_top = 385.065
+margin_right = 1012.43
+margin_bottom = 416.065
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "NO SEAT
+CHOOSEN"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect2/Confirm" to="." method="_on_Confirm_pressed"]

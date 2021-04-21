@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="Back" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 256.0
+margin_bottom = 120.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.419608, 0.564706, 0.996078, 1 )
